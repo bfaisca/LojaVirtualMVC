@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amazon.Models
+namespace LojaNet.Models
 {
     public enum FormaPagamentoEnum
     {
