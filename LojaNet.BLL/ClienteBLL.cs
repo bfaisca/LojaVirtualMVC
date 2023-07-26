@@ -47,7 +47,9 @@ namespace LojaNet.BLL
 
         public List<Cliente> ObterTodos()
         {
-            throw new NotImplementedException();
+           var dal = new ClienteDAL();
+            var lista = dal.ObterTodos();
+            return lista;
         }
     }
 }

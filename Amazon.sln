@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.BLL", "LojaNet.BLL\LojaNet.BLL.csproj", "{8C7FFB4B-EC68-4721-B877-F342FECCB34F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaNet.BLL", "LojaNet.BLL\LojaNet.BLL.csproj", "{8C7FFB4B-EC68-4721-B877-F342FECCB34F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.DAL", "LojaNet.DAL\LojaNet.DAL.csproj", "{0FD804C5-6229-4860-A62E-A12F23FD0114}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaNet.DAL", "LojaNet.DAL\LojaNet.DAL.csproj", "{0FD804C5-6229-4860-A62E-A12F23FD0114}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.Models", "LojaNet.Models\LojaNet.Models.csproj", "{737C7775-59F4-4EE3-A69E-2B1A00D574A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaNet.Models", "LojaNet.Models\LojaNet.Models.csproj", "{737C7775-59F4-4EE3-A69E-2B1A00D574A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.UI.WEB.Testes", "LojaNet.UI.WEB.Testes\LojaNet.UI.WEB.Testes.csproj", "{D46E5889-61F2-4C08-9FA5-A59D2F1C0CA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{737C7775-59F4-4EE3-A69E-2B1A00D574A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{737C7775-59F4-4EE3-A69E-2B1A00D574A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{737C7775-59F4-4EE3-A69E-2B1A00D574A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46E5889-61F2-4C08-9FA5-A59D2F1C0CA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46E5889-61F2-4C08-9FA5-A59D2F1C0CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46E5889-61F2-4C08-9FA5-A59D2F1C0CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46E5889-61F2-4C08-9FA5-A59D2F1C0CA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
