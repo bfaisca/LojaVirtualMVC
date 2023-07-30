@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaNet.DAL", "LojaNet.DAL\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaNet.Models", "LojaNet.Models\LojaNet.Models.csproj", "{737C7775-59F4-4EE3-A69E-2B1A00D574A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaNet.UI.WEB.Testes", "LojaNet.UI.WEB.Testes\LojaNet.UI.WEB.Testes.csproj", "{D46E5889-61F2-4C08-9FA5-A59D2F1C0CA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LojaNet.UI.WEB.Testes", "LojaNet.UI.WEB.Testes\LojaNet.UI.WEB.Testes.csproj", "{D46E5889-61F2-4C08-9FA5-A59D2F1C0CA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
