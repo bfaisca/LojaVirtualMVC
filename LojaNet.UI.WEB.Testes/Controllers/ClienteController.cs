@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using LojaNet.BLL;
 using LojaNet.Models;
+using LojaNet.DAL;
 
 namespace LojaNet.UI.WEB.Testes.Controllers
 {
@@ -10,7 +11,8 @@ namespace LojaNet.UI.WEB.Testes.Controllers
 
         public ClienteController()
         {
-            this.bll = new ClienteBLL();
+            var dal = new ClienteDAL();
+            this.bll = new ClienteBLL(dal);
         }
 
         public IActionResult Index()

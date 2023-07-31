@@ -1,4 +1,5 @@
 ﻿using APIConsulta.Model;
+using LojaNet.BLL;
 using LojaNet.DAL;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,12 +14,14 @@ namespace APIConsulta.Controllers
         public ClienteInfo ConsultarPorEmail(string chave, string email)
         {
             ClienteInfo clienteInfo = new ClienteInfo();
+
             if(chave != "12345")
             {
                 return null;
             }
 
-            var bll = new ClienteDAL();
+            var dal = new ClienteDAL();
+            var bll = new ClienteBLL(dal);
             var cliente = bll.ObterPorEmail(email);
 
             if(cliente == null)
