@@ -36,7 +36,7 @@ namespace LojaNet.DAL
         {
             Cliente cliente = new Cliente();
 
-            using (var reader = DbHelper.ExecuteReader("ObterClientePorId", "@Email", email))
+            using (var reader = DbHelper.ExecuteReader("ObterClientePorEmail", "@Email", email))
             {
                 if (reader.Read())
                 {

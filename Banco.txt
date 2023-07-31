@@ -1,0 +1,78 @@
+create table Cliente(
+Id varchar(50) Primary Key,
+Nome varchar(100),
+Email varchar(100),
+Telefone varchar(100));
+
+
+CREATE PROCEDURE ClienteIncluir
+(
+    @Id varchar(50),
+    @Nome varchar(100),
+    @Email varchar(100),
+    @Telefone varchar(100)
+)
+AS
+BEGIN
+    INSERT INTO Cliente (Id, Nome, Email, Telefone)
+    VALUES (@Id, @Nome, @Email, @Telefone)
+END
+
+
+CREATE PROCEDURE ClienteListar
+AS
+BEGIN
+    SELECT Id, Nome, Email, Telefone
+    FROM Cliente
+END
+
+
+CREATE PROCEDURE ClienteExcluir
+(
+    @Id varchar(50)
+)
+AS
+BEGIN
+    DELETE FROM Cliente
+    WHERE Id = @Id;
+END
+
+
+CREATE PROCEDURE ClienteAlterar
+(
+    @Id varchar(50),
+    @Nome varchar(100),
+    @Email varchar(100),
+    @Telefone varchar(100)
+)
+AS
+BEGIN
+    UPDATE Cliente
+    SET Nome = @Nome,
+        Email = @Email,
+        Telefone = @Telefone
+    WHERE Id = @Id
+END
+
+
+CREATE PROCEDURE ObterClientePorId
+(
+    @Id varchar(50)
+)
+AS
+BEGIN
+    SELECT Id, Nome, Email, Telefone
+    FROM Cliente
+    WHERE Id = @Id
+END
+
+CREATE PROCEDURE ObterClientePorEmail
+(
+    @email varchar(100)
+)
+AS
+BEGIN
+    SELECT Id, Nome, Email, Telefone
+    FROM Cliente
+    WHERE Email = @email
+END
