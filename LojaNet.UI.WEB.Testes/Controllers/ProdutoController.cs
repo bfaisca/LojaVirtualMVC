@@ -1,44 +1,41 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using LojaNet.BLL;
-using LojaNet.Models;
-using LojaNet.DAL;
+﻿using LojaNet.Models;
+using Microsoft.AspNetCore.Mvc;
 
-namespace LojaNet.UI.WEB.Testes
+namespace LojaNet.UI.WEB.Testes.Controllers
 {
-    public class ClienteController : Controller
+    public class ProdutoController : Controller
     {
-        private IClienteDados bll;
+        private IProdutosDados bll;
 
-        public ClienteController()
+        public ProdutoController()
         {
-            bll  = AppConteiner.ObterClienteBLL();
+            bll = AppConteiner.ObterProdutoBLL();
         }
-
         public IActionResult Index()
         {
             var lista = bll.ObterTodos();
             return View(lista);
         }
 
-        public IActionResult Incluir(Cliente cliente)
+        public IActionResult Incluir(Produto produto)
         {
             try
             {
-                bll.Incluir(cliente);
+                bll.Incluir(produto);
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError(string.Empty, ex.Message); 
-                return View(cliente);
-            }                   
+                ModelState.AddModelError(string.Empty, ex.Message);
+                return View(produto);
+            }
         }
         public IActionResult Detalhes(string Id)
         {
             try
             {
-                var cliente = bll.ObterPorId(Id);
-                return View(cliente);
+                var produto = bll.ObterPorId(Id);
+                return View(produto);
             }
             catch (Exception ex)
             {
@@ -51,8 +48,8 @@ namespace LojaNet.UI.WEB.Testes
         {
             try
             {
-                var cliente = bll.ObterPorId(Id);
-                return View(cliente);
+                var produto = bll.ObterPorId(Id);
+                return View(produto);
             }
             catch (Exception ex)
             {
@@ -62,17 +59,17 @@ namespace LojaNet.UI.WEB.Testes
         }
 
         [HttpPost]
-        public IActionResult Alterar(Cliente cliente)
+        public IActionResult Alterar(Produto produto)
         {
             try
             {
-                bll.Alterar(cliente);
+                bll.Alterar(produto);
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, ex.Message);
-                return View(cliente);
+                return View(produto);
             }
 
         }
@@ -81,8 +78,8 @@ namespace LojaNet.UI.WEB.Testes
         {
             try
             {
-                var cliente = bll.ObterPorId(id);
-                return View(cliente);
+                var produto = bll.ObterPorId(id);
+                return View(produto);
             }
             catch (Exception ex)
             {
@@ -92,7 +89,7 @@ namespace LojaNet.UI.WEB.Testes
         }
 
         [HttpPost]
-        public IActionResult Excluir(string id,IFormCollection form)
+        public IActionResult Excluir(string id, IFormCollection form)
         {
             try
             {
@@ -102,11 +99,10 @@ namespace LojaNet.UI.WEB.Testes
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, ex.Message);
-                var cliente = bll.ObterPorId(id);
-                return View(cliente);
+                var produto = bll.ObterPorId(id);
+                return View(produto);
             }
 
         }
-
     }
 }

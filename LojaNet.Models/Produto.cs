@@ -10,8 +10,8 @@ namespace LojaNet.Models
     {
         public string Id { get; set; }
         public string Nome { get; set; }
-        public string Preco { get; set; }
-        public string Estoque { get; set; }
+        public double Preco { get; set; }
+        public int Estoque { get; set; }
 
     }
 }
